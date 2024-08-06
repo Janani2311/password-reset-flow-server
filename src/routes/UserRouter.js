@@ -8,7 +8,8 @@ routes.post("/signup",userService.signupController)
 routes.post("/signin",userService.signInController)
 routes.post("/forgotpwd",userService.forgotPassword)
 routes.post("/resetpwd",userService.resetPassword)
-routes.get("/:id",verify,verifyAdmin,userService.getUserByID)
 routes.get("/get",userService.getUsers)
+routes.get("/:id",verify,verifyAdmin,userService.getUserByID)
+
 
 export default routes
