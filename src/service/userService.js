@@ -21,7 +21,7 @@ const createRandomString = () => {
 
 const getUsers = async(req,res) => {
     try {
-        let users = await userModel.find({});
+        let users = await userModel.find({},{firstName:1, lastName:1, email:1, userId:1, _id:0});
         res.status(200).send({
             message:"Data Fetch Successfull",
             data:users
