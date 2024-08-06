@@ -153,7 +153,7 @@ const forgotPassword = async(req,res) => {
                     pass:process.env.USER_PWD
                 }
             });
-            const link = `http://localhost:5173/forgotpassword?token=${random_string}`;
+            const link = `${process.env.CLIENT_URL}forgotpassword?token=${random_string}`;
             const mailOptions = {
                 from: process.env.USER_MAILID,
                 to:user.email,
